@@ -188,7 +188,7 @@ In theory the workflow is:
 
 3. User is given either single factor or second factor options, depending what is set on the subdomain in the configuration.yml
 
-4. User signs in successfully and is redirected back to origin URL https://private.domain.com
+4. User signs in successfully and is redirected back to origin URL https://service.domain.com
 
 
 Hope this is of assistance to you. Please provide feedback where required.
