@@ -215,11 +215,13 @@ access_control:
   # Default policy can either be 'bypass', 'one_factor', 'two_factor' or 'deny'.
   # It is the policy applied to any resource if there is no policy to be applied
   # to the user.
-  default_policy: bypass
+  default_policy: deny
 
   rules:
     # Rules applied to 'admins' group
-    - domain: "*.YOURDOMAIN.COM"
+    - domain: "*.ibraflix.com"
+      subject:
+        - "group:admins"
       policy: one_factor
 
 # Configuration of session cookies
