@@ -5,6 +5,8 @@ We are most famous for our media streaming product IBRAFLIX (https://ibraflix.co
 You can find our repos here: https://github.com/ibracorp?tab=repositories
 For help you can join our discord: https://discord.gg/VWAG7rZ
 
+unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/
+
 ----
 # Authelia on unRAID
 The instructions below are for installing the following on unRAID using Docker:
