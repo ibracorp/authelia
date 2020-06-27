@@ -40,10 +40,11 @@ All are explained in their respective steps later in this guide:
 		
 ## Redis
 
-	## Authelia requires the Redis container to work (as referenced in the configuration.yml)
-	1. In unRAID, visit the apps tab
-	2. Search for and install 'redis'. We are using the bitnami/redis container as it has parameters mapped for a password, which we will need to add into configuration.yml later.
-	3. In the template installation screen:
+ Authelia requires the Redis container to work (as referenced in the configuration.yml)
+1. In unRAID, visit the apps tab
+2. Search for and install 'redis'. We are using the bitnami/redis container as it has parameters mapped for a password, which we will need to add into configuration.yml later.
+3. In the template installation screen:
+
 		Network Type: The network you host your containers on so that they can communicate.
 		PORT: 6379
 		ALLOW_EMPTY_PASSWORD: no
@@ -51,72 +52,81 @@ All are explained in their respective steps later in this guide:
 		
 ## MYSQL/MariaDB
 
-	## Authelia requires a MYSQL/MariaDB database container to work (as referenced in the configuration.yml)
-	IF YOU DO NOT ALREADY HAVE SQL INSTALLED:
-		1. In unRAID, visit the apps tab
-		2. Search for and install 'mariadb'. We are using the linuxserver/mariadb container.
-		3. In the template installation screen:
+ Authelia requires a MYSQL/MariaDB database container to work (as referenced in the configuration.yml)
+IF YOU DO NOT ALREADY HAVE SQL INSTALLED:
+1. In unRAID, visit the apps tab
+2. Search for and install 'mariadb'. We are using the linuxserver/mariadb container.
+3. In the template installation screen:
+
 			Network Type: The network you host your containers on so that they can communicate.
 			PORT: 3306
 			MYSQLROOTPASSWORD: YOURPASSWORD
-	1. Under Docker tab in unRAID, left click the mariadb container, select Console
-		2. Create our user:
-			Enter the following then hit enter:
-				mysql -uroot -p
-			Enter the password you set in the container settings then type:
-				CREATE USER 'authelia' IDENTIFIED by 'YOURPASSWORD'
-				## This password will be referenced in configuration.yml
-		3. Create our database:
-			Enter the following then hit enter:
-				CREATE DATABASE IF NOT EXISTS authelia;
-		4. Allow privileges to the database:
-			Enter the following then hit enter:
-				GRANT ALL PRIVILEGES ON authelia.* TO 'authelia' IDENTIFIED BY 'YOURPASSWORD';
-				##This is the password you created for the user above.
-			Enter the following then hit enter:
-				quit
-		5. You can now close the terminal window
+4. Under Docker tab in unRAID, left click the mariadb container, select Console
+5. Create our user:
+    -   Enter the following then hit enter:
+
+			mysql -uroot -p
+	-   Enter the password you set in the container settings then type:
+
+			CREATE USER 'authelia' IDENTIFIED by 'YOURPASSWORD'
+    This password will be referenced in configuration.yml
+6. Create our database:
+	-   Enter the following then hit enter:
+
+			CREATE DATABASE IF NOT EXISTS authelia;
+7. Allow privileges to the database:
+	-   Enter the following then hit enter:
+
+		    GRANT ALL PRIVILEGES ON authelia.* TO 'authelia' IDENTIFIED BY 'YOURPASSWORD';
+		This is the password you created for the user above.
+	-   Enter the following then hit enter:
+
+			quit
+8. You can now close the terminal window
 		
 ## unRAID XML Template
 
-	##	Currently there’s is no existing template on the Community Apps store for Authelia. Instead,
-	##	we will pull a template from Git, originally created by (big thanks) lilfade (https://github.com/lilfade).
-	##	We will pull directly from his Git to provide the credit to his work. However, you can also directly access the .xml here if you prefer:
-	##	https://github.com/ibracorp/authelia/blob/master/authelia.xml
+Currently there’s is no existing template on the Community Apps store for Authelia. Instead, we will pull a template from Git, originally created by (big thanks) lilfade (https://github.com/lilfade).
+We will pull directly from his Git to provide the credit to his work. However, you can also directly access the .xml here if you prefer: https://github.com/ibracorp/authelia/blob/master/authelia.xml
 
-	1. Open a terminal and run:
-			mkdir /boot/config/plugins/community.applications/private/myrepo/ -p 
-		this will create a new folder. 
-	2. (Optional) To download into the newly created folder:
-			cd /boot/config/plugins/community.applications/private/myrepo/
-	3. Execute this command to grab the xml file: 
-			wget -O - https://gist.githubusercontent.com/lilfade/da12c44580a09c4e85f75489d30bc46b/raw/cf884c68c191e51a99fc49bbe92c7833dd1554cf/authelia.xml
+1. Open the unRAID terminal and run:
+ 
+		mkdir /boot/config/plugins/community.applications/private/myrepo/ -p 
+	This will create a new folder. 
+2. (Optional) To download into the newly created folder:
 
-	4. You can now close the terminal window
-	5. In unRAID, visit the apps tab 
-		Under Categories, select Private Apps. 
-		You will see the newly created template for Authelia.
+	    cd /boot/config/plugins/community.applications/private/myrepo/
+3. Execute this command to grab the xml file: 
+
+		wget -O - https://gist.githubusercontent.com/lilfade/da12c44580a09c4e85f75489d30bc46b/raw/cf884c68c191e51a99fc49bbe92c7833dd1554cf/authelia.xml
+
+4. You can now close the terminal window
+5. In unRAID, visit the apps tab 
+	- Under Categories, select Private Apps. 
+	- You will see the newly created template for Authelia.
 
 ## Authelia
 
-	1. Install Authelia using the new template.
-	##	The container will stop after first run as the config file is missing and will be created automatically.
-	##	You should not need to change any settings unless the host port (default: 9091) will clash with any other containers.
+1. Install Authelia using the new template.
+    - The container will stop after first run as the config file is missing and will be created automatically.
+    - You should not need to change any settings unless the host port (default: 9091) will clash with any other containers.
 
-	2. In your appdata/authelia folder you will find: 
-		configuration.yml
-	## You MUST edit this file to suit your domain, gmail (or other smtp) and environment. The sample provided in this repo has been tested and works, however, it is strongly advised ## the read the official docs on the configuration to ensure it meets your requirements (https://www.authelia.com/docs/configuration/)
-	3. Configure the file as required. We have placed our confirmed working config in this repo. Remember the placeholders which will need to be changed 
-		(listed at the top of this document)
-		For secret keys, you can create a 128-bit encryption to put in from here: https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
-		Remeber to keep them different for the different areas which use them.
-	4. You will notice that LDAP has been commented out for this setup to use file backend instead. LDAP is beyond the scope of this document.
-		- In our repo you will find the file named 'users_database.yml'. 
-	5. Copy this file into your appdata/authelia folder.
-		## You MUST edit this file
-		Adjust the file to the user you would like to sign in as. For help see here: https://www.authelia.com/docs/configuration/authentication/file.html
-		For password, create one here and then replace the encrypted line with your encrypted line: https://argon2.online/
-			Settings for creating the password on https://argon2.online/ as referenced in the configuration.yml:
+2. In your appdata/authelia folder you will find: 
+
+	    configuration.yml
+You **MUST** edit this file to suit your domain, gmail (or other smtp) and environment. The sample provided in this repo has been tested and works, however, it is strongly advised ## the read the official docs on the configuration to ensure it meets your requirements (https://www.authelia.com/docs/configuration/)
+
+3. Configure the file as required. We have placed our confirmed working config in this repo. Remember the placeholders which will need to be changed (listed at the top of this document).
+	- For secret keys, you can create a 128-bit encryption to put in from here: https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
+		Remember to keep them different for the different areas which use them.
+4. You will notice that LDAP has been commented out for this setup to use file backend instead. LDAP is beyond the scope of this document.
+	- In our repo you will find the file named 'users_database.yml'. 
+	- Copy this file into your appdata/authelia folder.
+	You **MUST** edit this file.
+		- Adjust the file to the user you would like to sign in as. For help see here: https://www.authelia.com/docs/configuration/authentication/file.html
+		- For password, create one here and then replace the encrypted line with your encrypted line: https://argon2.online/
+		- Settings for creating the password on https://argon2.online/ as referenced in the configuration.yml:
+	
 				Plain input text: your desired password
 				Salt: 16
 				Parallelism: 8 (or twice your CPU cores)
@@ -126,60 +136,59 @@ All are explained in their respective steps later in this guide:
 				Algorithm: Argon2id
 			Select Generate Hash
 			
-	At this point you should start the container and read the logs. Test that you can reach the webui of Authelia (http://SERVERIP:9091) and can log in or setup 2FA.
+	At this point you should start the Authelia container and read the logs. Test that you can reach the webui of Authelia (http://SERVERIP:9091) and can log in or setup 2FA.
 	
 ## NGINX Proxy Manager (NPM)
+The templates provided in this repo assume you have created a CNAME subdomain in your DNS for 'auth.example.com' and have a subdomain already working for your endpoint such as 'radarr.example.com'. 
+1. Modify the data inside 'Authelia Portal.conf' and 'Protected Endpoint.conf'. If no ports were changed in any of the above config, you should only need to change:
+	- 'Authelia Portal.conf':
+	
+        - 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
+	- 'Protected Endpoint.conf':
+		- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
+		- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
+		- 'CONTAINERNAME' = Name of the container to be proxied. i.e. 'monitorr'
 
-	##	The templates provided in this repo assume you have created a CNAME subdomain in your DNS for 'auth.example.com' and have a subdomain already working 
-		for your endpoint such as 'radarr.example.com'. 
-	1. Modify the data inside 'Authelia Portal.conf' and 'Protected Endpoint.conf'
-		If no ports were changed in any of the above config, you should only need to change 
-			'Authelia Portal.conf':
-				- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
-			'Protected Endpoint.conf':
-				- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
-				- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
-				- 'CONTAINERNAME' = Name of the container to be proxied. i.e. 'monitorr'
-	2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
-		## WARNING - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.
-	3. Select Add Proxy Host
-		Details:
-			Domain name: auth.example.com (or whatever CNAME you set in your DNS)
-			Scheme: http
-			Forward Hostname / IP: Local IP address of your unRAID server
-			Port: 9091
-			Turn ON: Cache Assets, Block Common Exploits
-		SSL:
-			Request new SSL certificate
-			Turn ON: Force SSL, HTTP/2 Support, HSTS Enabled (if using, i.e. on in Cloudflare)
-			Email address: used to create Let’s Encrypt cert.
-			Select I Agree and Save.
-		## REMEMBER, after this is successful, to return to Cloudflare and turn the proxy against auth.example.com back ON, or your server IP will be public.
-	4. Test that you can reach the webui of Authelia selecting the new proxy or typing in its address. i.e. 'auth.example.com'
-		## NB: For some reason in the current version of NPM as of writing this (v2.2.4) the SSL settings turn off after initial creation. Go back into the SSL 
+2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
+		 - **WARNING** - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.
+3. Select Add Proxy Host
+    - Details:
+        - Domain name: auth.example.com (or whatever CNAME you set in your DNS)
+		- Scheme: http
+		- Forward Hostname / IP: Local IP address of your unRAID server
+		- Port: 9091
+		- Turn ON: Cache Assets, Block Common Exploits
+	- SSL:
+		- Request new SSL certificate
+		- Turn ON: Force SSL, HTTP/2 Support, HSTS Enabled (if using, i.e. on in Cloudflare)
+		- Email address: used to create Let’s Encrypt cert.
+		- Select I Agree and Save.
+**REMINDER**: after this is successful, return to Cloudflare and turn the proxy against auth.example.com back ON, or your server IP will be public.
+4. Test that you can reach the webui of Authelia selecting the new proxy or typing in its address. i.e. 'auth.example.com'
+    - **NB:** For some reason in the current version of NPM as of writing this (v2.2.4) the SSL settings turn off after initial creation. Go back into the SSL 
 		settings of 'auth.example.com' and turn them back on then save again. 
-	5. If all the above is working as intended;
-		Edit proxy host 'auth.example.com'
-			Advanced
-				Under Custom Nginx Configuration, paste the config you customised from 'Authelia Portal.conf'
-			Save
-			Confirm you can still access the webui via the URL.
-	6. To protect an endpoint (i.e. monitorr)
-		Edit proxy host 'monitorr.example.com'
-			Advanced
-				Under Custom Nginx Configuration, paste the config you customised from 'Protected Endpoint.conf'
+5. If all the above is working as intended; Edit proxy host 'auth.example.com'
+	- Advanced
+		- Under Custom Nginx Configuration, paste the config you customised from 'Authelia Portal.conf'
+	
+6. Save and confirm you can still access the webui via the URL.
+
+## To protect an endpoint (i.e. monitorr)
+1. Edit proxy host 'monitorr.example.com'
+	- Advanced
+		- Under Custom Nginx Configuration, paste the config you customised from 'Protected Endpoint.conf'
 			
 			
-## TESTING
+## Workflow
 In theory the workflow is:
 
-	1. User (listed in the users file, but is not signed in) tries to connect to https://service.domain.com
+1. User (listed in the users file, but is not signed in) tries to connect to https://service.domain.com
 
-	2. User is redirected to https://auth.domain.com to sign in
+2. User is redirected to https://auth.domain.com to sign in
 
-	3. User is given either single factor or second factor options, depending what is set on the subdomain in the configuration.yml
+3. User is given either single factor or second factor options, depending what is set on the subdomain in the configuration.yml
 
-	4. User signs in successfully and is redirected back to origin URL https://private.domain.com
+4. User signs in successfully and is redirected back to origin URL https://private.domain.com
 
 
 Hope this is of assistance to you. Please provide feedback where required.
