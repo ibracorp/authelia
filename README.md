@@ -1,49 +1,46 @@
-####******************************************* WELCOME TO IBRACORP **********************************************####
-##																													##
-## We run a homelab server which offers various services such as media streaming, cloud storage, chat,  and more.	##
-## We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)								##
-##																													##
-## Our goal is to help bring open source products in the community to more users by making them friendly			##
-## to use and helping support an open source future which protects privacy and is collobrative.						##
-##																													##
-## You can found our repos here: https://github.com/ibracorp?tab=repositories										##
-## For help you can join our discord: https://discord.gg/VWAG7rZ													##
-##																													##
-####**************************************************************************************************************####
+# WELCOME TO IBRACORP
+We run a home lab server which offers various services such as media streaming, cloud storage, chat, and more.
+We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)	Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
-## The instructions below are for installing the following on unRAID using Docker:
-##	Authelia
-##	Website: https://www.authelia.com/
-##	Docs: https://www.authelia.com/docs/
-##	Git: https://github.com/authelia/authelia
-##	DockerHub: https://hub.docker.com/r/authelia/authelia
+You can find our repos here: https://github.com/ibracorp?tab=repositories
+For help you can join our discord: https://discord.gg/VWAG7rZ
 
-## It assumes your environment has the following already setup and working:
-##	- NGINX Proxy Manager
-##	- Domain with the following subdomains (where 'example' is your domain and 'service' is the endpoint you want protected (i.e. monitorr.example.com)
-##	Adjust/Create your own CNAMES where required.
-##		- example.com
-##		- auth.example.com
-##		- service.example.com
-##	This will not cover how to configure LDAP, Traefik or Let'sEncrypt, however there are plenty of resources on how to do this, including the offical docs of 
-##	Authelia
+----
+# Authelia on unRAID
+The instructions below are for installing the following on unRAID using Docker:
+- Authelia
+    -  Website: https://www.authelia.com/
+    - Docs: https://www.authelia.com/docs/
+    - Git: https://github.com/authelia/authelia
+    - Docker Hub: https://hub.docker.com/r/authelia/authelia
 
-##	REFERENCES ##
-##	To make modifying easier we have tried to replace commonly required changes with a placeholder. This allows a quick Find/Replace in something like 
-##	Notepad++ (which is highly recommended). All are explain in their respective steps later in this guide:
-##	- YOURPASSWORD - Password which you have set, with respect the section your are reading. i.e. MySQL password could be different to your redis password.
-##	- YOURSECRET - A secret generated in 128-bit. You can use this site to generate them:
-		https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
-##	- YOURDOMAIN - Your own domain name
-##	- SERVERIP - Local IP address of your unRAID server the containers run on. i.e 192.168.1.50
-##	- CONTAINERPORT - Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
-## 	- CONTAINERNAME - Name of the container to be proxied. i.e 'monitorr'
+We assume your environment has the following already setup and working:
+- NGINX Proxy Manager
+- Domain with the following subdomains (where 'example' is your domain and 'service' is the endpoint you want protected (i.e. monitorr.example.com)
+    - Adjust/Create your own CNAMES where required.
+		- example.com
+		- auth.example.com
+		- service.example.com
 
-************INSTRUCTIONS****************
+This will not cover how to configure LDAP, Traefik or Let’s Encrypt, however there are plenty of resources on how to do this, including the official docs of Authelia.
+
+----
+##	REFERENCES
+To make modifying easier we have tried to replace commonly required changes with a placeholder. This allows a quick Find/Replace in something like Notepad++ (which is highly recommended). 
+All are explained in their respective steps later in this guide:
+- YOURPASSWORD - Password which you have set, with respect the section you are reading. i.e. MySQL password could be different to your Redis password.
+- YOURSECRET - A secret generated in 128-bit. You can use this site to generate them: 
+   - https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
+- YOURDOMAIN - Your own domain name
+- SERVERIP - Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
+- CONTAINERPORT - Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
+- CONTAINERNAME - Name of the container to be proxied. i.e. 'monitorr'
+
+---
 		
-*********** Redis ***********
+## Redis
 
-	## Authelia requires the redis container to work (as referenced in the configuration.yml)
+	## Authelia requires the Redis container to work (as referenced in the configuration.yml)
 	1. In unRAID, visit the apps tab
 	2. Search for and install 'redis'. We are using the bitnami/redis container as it has parameters mapped for a password, which we will need to add into configuration.yml later.
 	3. In the template installation screen:
@@ -52,7 +49,7 @@
 		ALLOW_EMPTY_PASSWORD: no
 		PASSWORD: YOURPASSWORD
 		
-*********** MYSQL/MariaDB ***********
+## MYSQL/MariaDB
 
 	## Authelia requires a MYSQL/MariaDB database container to work (as referenced in the configuration.yml)
 	IF YOU DO NOT ALREADY HAVE SQL INSTALLED:
@@ -62,7 +59,7 @@
 			Network Type: The network you host your containers on so that they can communicate.
 			PORT: 3306
 			MYSQLROOTPASSWORD: YOURPASSWORD
-	1. Under Docker tab in unRAID, left-click the mariadb container, select Console
+	1. Under Docker tab in unRAID, left click the mariadb container, select Console
 		2. Create our user:
 			Enter the following then hit enter:
 				mysql -uroot -p
@@ -80,11 +77,11 @@
 				quit
 		5. You can now close the terminal window
 		
-*********** unRAID XML Template ***********
+## unRAID XML Template
 
-	##	Currently theres is no existing template on the Community Apps store for Authelia. Instead,
-	##	we will pull a template from Git, orginally created by (big thanks) lilfade (https://github.com/lilfade).
-	##	We we will pull directly from his Git to provide the credit to his work. However, you can also directly access the .xml here if you prefer:
+	##	Currently there’s is no existing template on the Community Apps store for Authelia. Instead,
+	##	we will pull a template from Git, originally created by (big thanks) lilfade (https://github.com/lilfade).
+	##	We will pull directly from his Git to provide the credit to his work. However, you can also directly access the .xml here if you prefer:
 	##	https://github.com/ibracorp/authelia/blob/master/authelia.xml
 
 	1. Open a terminal and run:
@@ -100,7 +97,7 @@
 		Under Categories, select Private Apps. 
 		You will see the newly created template for Authelia.
 
-*********** Authelia ***********
+## Authelia
 
 	1. Install Authelia using the new template.
 	##	The container will stop after first run as the config file is missing and will be created automatically.
@@ -131,20 +128,20 @@
 			
 	At this point you should start the container and read the logs. Test that you can reach the webui of Authelia (http://SERVERIP:9091) and can log in or setup 2FA.
 	
-*********** NGINX Proxy Manager (NPM) ***********
+## NGINX Proxy Manager (NPM)
 
 	##	The templates provided in this repo assume you have created a CNAME subdomain in your DNS for 'auth.example.com' and have a subdomain already working 
 		for your endpoint such as 'radarr.example.com'. 
 	1. Modify the data inside 'Authelia Portal.conf' and 'Protected Endpoint.conf'
 		If no ports were changed in any of the above config, you should only need to change 
 			'Authelia Portal.conf':
-				- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e 192.168.1.50
+				- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 			'Protected Endpoint.conf':
-				- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e 192.168.1.50
+				- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 				- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
-				- 'CONTAINERNAME' = Name of the container to be proxied. i.e 'monitorr'
+				- 'CONTAINERNAME' = Name of the container to be proxied. i.e. 'monitorr'
 	2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
-		## WARNING - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in cloudflare to bypass proxy ONLY for this step.
+		## WARNING - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.
 	3. Select Add Proxy Host
 		Details:
 			Domain name: auth.example.com (or whatever CNAME you set in your DNS)
@@ -155,10 +152,10 @@
 		SSL:
 			Request new SSL certificate
 			Turn ON: Force SSL, HTTP/2 Support, HSTS Enabled (if using, i.e. on in Cloudflare)
-			Email address: used to create Let'sEncrypt cert.
+			Email address: used to create Let’s Encrypt cert.
 			Select I Agree and Save.
-		## REMEMBER, after this is successful, to return to Cloudflare and turn the proxy against auth.example.com back ON, or your serverip will be public.
-	4. Test that you can reach the webui of Authelia selecting the new proxy or typing in it's address. i.e. 'auth.example.com'
+		## REMEMBER, after this is successful, to return to Cloudflare and turn the proxy against auth.example.com back ON, or your server IP will be public.
+	4. Test that you can reach the webui of Authelia selecting the new proxy or typing in its address. i.e. 'auth.example.com'
 		## NB: For some reason in the current version of NPM as of writing this (v2.2.4) the SSL settings turn off after initial creation. Go back into the SSL 
 		settings of 'auth.example.com' and turn them back on then save again. 
 	5. If all the above is working as intended;
@@ -173,7 +170,7 @@
 				Under Custom Nginx Configuration, paste the config you customised from 'Protected Endpoint.conf'
 			
 			
-*********** TESTING ***********
+## TESTING
 In theory the workflow is:
 
 	1. User (listed in the users file, but is not signed in) tries to connect to https://service.domain.com
