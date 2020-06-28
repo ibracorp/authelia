@@ -186,7 +186,9 @@ In theory the workflow is:
 
 Hope this is of assistance to you. Please provide feedback where required.
 
-
+## To Do
+- Add instructions on how to forward auth for SSO
+- More specific examples of config for apps such as Nextcloud
 
 
 
