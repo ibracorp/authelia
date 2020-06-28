@@ -126,6 +126,7 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 	- 'Authelia Portal.conf':
 	
         - 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
+	
 	- 'Protected Endpoint.conf':
 		- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 		- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
@@ -155,11 +156,21 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 	
 6. Save and confirm you can still access the webui via the URL.
 
-## To protect an endpoint (i.e. monitorr)
-1. Edit proxy host 'monitorr.example.com'
+## To protect an endpoint (i.e. sonarr)
+1. Edit proxy host 'sonarr.example.com'
 	- Advanced
 		- Under Custom Nginx Configuration, paste the config you customised from 'Protected Endpoint.conf'
-			
+2. (Optional) If using services which use API to communicate with eachother such as Radarr, Sonarr or Lidarr, you may also need to add a location for the API in order to disable the authorization else it may fail to connect. Settings below are relevant to Sonarr and it's sister products. Be sure to check the docs of the service you are configuring. 
+	- Edit proxy host 'sonarr.example.com'
+    		- Custom Locations
+
+	            Location: /api
+	            Scheme: http
+	            Forward Hostname/IP: SERVERIP/api
+	            Forward Port: 8686
+	            Select gear icon: auth_request off;
+        
+	- Confirm you can connect to the API by using, for example, Ombi. TV > Sonarr > Test connection. 		
 			
 ## Workflow
 In theory the workflow is:
