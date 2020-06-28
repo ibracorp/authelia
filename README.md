@@ -85,31 +85,11 @@ IF YOU DO NOT ALREADY HAVE SQL INSTALLED:
 
 			quit
 8. You can now close the terminal window
-		
-## unRAID XML Template
 
-Currently there’s is no existing template on the Community Apps store for Authelia. Instead, we will pull a template from Git, originally created by (big thanks) lilfade (https://github.com/lilfade).
-We will pull directly from his Git to provide the credit to his work. However, you can also directly access the .xml here if you prefer: https://github.com/ibracorp/authelia/blob/master/authelia.xml
-
-1. Open the unRAID terminal and run:
- 
-		mkdir /boot/config/plugins/community.applications/private/myrepo/ -p 
-	This will create a new folder. 
-2. (Optional) To download into the newly created folder:
-
-	    cd /boot/config/plugins/community.applications/private/myrepo/
-3. Execute this command to grab the xml file: 
-
-		wget -O - https://gist.githubusercontent.com/lilfade/da12c44580a09c4e85f75489d30bc46b/raw/cf884c68c191e51a99fc49bbe92c7833dd1554cf/authelia.xml
-
-4. You can now close the terminal window
-5. In unRAID, visit the apps tab 
-	- Under Categories, select Private Apps. 
-	- You will see the newly created template for Authelia.
 
 ## Authelia
 
-1. Install Authelia using the new template.
+1. Install Authelia via the Community Apps plugin in unRAID. Original template was created by (big thanks) lilfade (https://github.com/lilfade)
     - The container will stop after first run as the config file is missing and will be created automatically.
     - You should not need to change any settings unless the host port (default: 9091) will clash with any other containers.
 
