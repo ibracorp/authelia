@@ -187,7 +187,7 @@ In theory the workflow is:
 Hope this is of assistance to you. Please provide feedback where required.
 
 ## No/infinite native login screen on endpoint
-You may find when passing through Authelia successfully that the endpoint (i.e. Sonarr) that there is no login screen (if you had a login screen enabled).
+You may find when passing through Authelia successfully that the endpoint (i.e. Sonarr) has no login screen (if you had a login screen enabled).
 This is not related to Authelia, but rather NGINX. From personal experience performing the below may fix this.
 1. Edit proxy host 'sonarr.example.com'
 	- Advanced
