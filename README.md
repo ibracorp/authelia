@@ -186,6 +186,17 @@ In theory the workflow is:
 
 Hope this is of assistance to you. Please provide feedback where required.
 
+## No/infinite native login screen on endpoint
+You may find when passing through Authelia successfully that the endpoint (i.e. Sonarr) that there is no login screen (if you had a login screen enabled).
+This is not related to Authelia, but rather NGINX. From personal experience performing the below may fix this.
+1. Edit proxy host 'sonarr.example.com'
+	- Advanced
+		- Under Custom Nginx Configuration, paste the below in **above** any location blocks
+			
+			proxy_intercept_errors off;
+
+Test again. If no change, try with it on or removed again.
+
 ## To Do
 - Add instructions on how to forward auth for SSO
 - More specific examples of config for apps such as Nextcloud
