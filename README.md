@@ -70,7 +70,7 @@ IF YOU DO NOT ALREADY HAVE SQL INSTALLED:
 			mysql -uroot -p
 	-   Enter the password you set in the container settings then type:
 
-			CREATE USER 'authelia' IDENTIFIED by 'YOURPASSWORD'
+			CREATE USER 'authelia' IDENTIFIED by 'YOURPASSWORD';
     This password will be referenced in configuration.yml
 6. Create our database:
 	-   Enter the following then hit enter:
@@ -196,6 +196,15 @@ This is not related to Authelia, but rather NGINX. From personal experience perf
 			proxy_intercept_errors off;
 
 Test again. If no change, try with it on or removed again.
+
+## Let'sEncrypt
+
+If you are using LinuxServer.io LE container you need to add this under the server block for its out-of-the-box Authelia support to work:
+
+	server:
+  	path: authelia
+	
+If you are using the LSIO LE container, there's no need to utilize Authelia as its own subdomain reverse proxy.
 
 ## To Do
 - Add instructions on how to forward auth for SSO
