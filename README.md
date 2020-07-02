@@ -131,6 +131,7 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 		- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 		- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
 		- 'CONTAINERNAME' = Name of the container to be proxied. i.e. 'monitorr'
+		- 'YOURDOMAIN' = Your own domain name. 
 
 2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
 		 - **WARNING** - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.
