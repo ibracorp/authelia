@@ -37,6 +37,7 @@ All are explained in their respective steps later in this guide:
 - SERVERIP - Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 - CONTAINERPORT - Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
 - CONTAINERNAME - Name of the container to be proxied. i.e. 'monitorr'
+- CONTAINERIP - IP address of the container.
 
 ---
 		
@@ -131,6 +132,7 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 		- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 		- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
 		- 'CONTAINERNAME' = Name of the container to be proxied. i.e. 'monitorr'
+		- 'CONTAINERIP' = IP address of the container.
 		- 'YOURDOMAIN' = Your own domain name. 
 
 2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
