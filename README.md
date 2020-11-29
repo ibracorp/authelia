@@ -155,7 +155,9 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 		- 'YOURDOMAIN' = Your own domain name. 
 
 2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
-		 - ~~**WARNING** - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.~~ Seems to be fixed now.
+		 
+- ~~**WARNING** - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.~~ Seems to be fixed now.
+
 3. Select Add Proxy Host
     - Details:
         - Domain name: auth.example.com (or whatever CNAME you set in your DNS)
@@ -233,6 +235,7 @@ If you are using the LSIO LE container, there's no need to utilize Authelia as i
 ## LDAP
 
 If you want to use LDAP as your backend (which is recommended), here's the config we use in the Authelia YAML. Be sure to comment out the File Backend section when using this. 
+
 **NOTE**: This config is based on implementation with FreeIPA as our LDAP server. If using any other server such as OpenLDAP or Active Directory, you will need to adjust the user/group attributes and filters to suit. 
 You must also modify the domain settings below to match your environment.
 
