@@ -291,7 +291,9 @@ You must also modify the domain settings below to match your environment.
     password: YOURPASSWORD
 ```
 
-
+##Duo 2FA
+These instructions were provided by ThreeFN on our Unraid forum thread (link at top).
+>On Duo, you actually need TWO logins.  The first is your admin account that sets-up your hostname/integration_key/secret_key via Partner Auth API.  Now with with you need to go into the config for the Application->PartnerAuthAPI and add a user that is THE SAME NAME as the user you have in file/ldap and then EMAIL THEM which will give you the ability to enroll the phone app to that user.  Then you can enroll that in authelia when you get to that point.
 
 
 
