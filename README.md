@@ -11,7 +11,7 @@ unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibra
 ----
 
 # Table of Contents
-1. [Authelia on unRAID](https://github.com/ibracorp/authelia#authelia-on-unraid)
+1. [Authelia on unRAID](#authelia-on-unraid)
 2. [References](https://github.com/ibracorp/authelia#references)
 3. [Redis](https://github.com/ibracorp/authelia#redis)
 4. [MySQL & MariaDB](https://github.com/ibracorp/authelia#mysqlmariadb)
