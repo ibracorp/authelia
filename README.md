@@ -119,7 +119,7 @@ IF YOU DO NOT ALREADY HAVE SQL INSTALLED:
 2. In your appdata/authelia folder you will find: 
 
 	    configuration.yml
-You **MUST** edit this file to suit your domain, gmail (or other smtp) and environment. The sample provided in this repo has been tested and works, however, it is strongly advised ## the read the official docs on the configuration to ensure it meets your requirements (https://www.authelia.com/docs/configuration/)
+You **MUST** edit this file to suit your domain, gmail (or other smtp) and environment. The sample provided in this repo has been tested and works, however, it is strongly advised to read the official docs on the configuration to ensure it meets your requirements (https://www.authelia.com/docs/configuration/)
 
 3. Configure the file as required. We have placed our confirmed working config in this repo. Remember the placeholders which will need to be changed (listed at the top of this document).
 	- For secret keys, you can create a 128-bit encryption to put in from here: https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
