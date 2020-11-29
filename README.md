@@ -9,7 +9,6 @@ For help you can join our discord: https://discord.gg/VWAG7rZ
 unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/
 
 ----
-{:toc}
 
 # Table of Contents
 1. [Authelia on unRAID](https://github.com/ibracorp/authelia#authelia-on-unraid)
