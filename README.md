@@ -12,19 +12,19 @@ unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibra
 
 # Table of Contents
 1. [Authelia on unRAID](#authelia-on-unraid)
-2. [References](https://github.com/ibracorp/authelia#references)
-3. [Redis](https://github.com/ibracorp/authelia#redis)
-4. [MySQL & MariaDB](https://github.com/ibracorp/authelia#mysqlmariadb)
-5. [Authelia](https://github.com/ibracorp/authelia#authelia)
-6. [NGINX Proxy Manager](https://github.com/ibracorp/authelia#nginx-proxy-manager-npm)
-7. [Protecting Endpoints](https://github.com/ibracorp/authelia#to-protect-an-endpoint-ie-sonarr)
-8. [FAQ](https://github.com/ibracorp/authelia#faq)
-	1. [Worflow](https://github.com/ibracorp/authelia#workflow)
-	2. [Infinite Login Screen](https://github.com/ibracorp/authelia#noinfinite-native-login-screen-on-endpoint)
-	3. [Let's Encrypt](https://github.com/ibracorp/authelia#letsencrypt)
-	4. [LDAP](https://github.com/ibracorp/authelia#ldap)
-	5. [DUO 2FA](https://github.com/ibracorp/authelia#duo-2fa)
-	6. [Authelia Interface](https://github.com/ibracorp/authelia#access-the-authelia-interface)
+2. [References](#references)
+3. [Redis](#redis)
+4. [MySQL & MariaDB](#mysqlmariadb)
+5. [Authelia](#authelia)
+6. [NGINX Proxy Manager](#nginx-proxy-manager-npm)
+7. [Protecting Endpoints](#to-protect-an-endpoint-ie-sonarr)
+8. [FAQ](#faq)
+	1. [Worflow](#workflow)
+	2. [Infinite Login Screen](#noinfinite-native-login-screen-on-endpoint)
+	3. [Let's Encrypt](#letsencrypt)
+	4. [LDAP](#ldap)
+	5. [DUO 2FA](#duo-2fa)
+	6. [Authelia Interface](#access-the-authelia-interface)
 	
 
 ## Authelia on unRAID
