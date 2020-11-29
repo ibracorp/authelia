@@ -125,18 +125,16 @@ You **MUST** edit this file to suit your domain, gmail (or other smtp) and envir
 The templates provided in this repo assume you have created a CNAME subdomain in your DNS for 'auth.example.com' and have a subdomain already working for your endpoint such as 'radarr.example.com'. 
 1. Modify the data inside 'Authelia Portal.conf' and 'Protected Endpoint.conf'. If no ports were changed in any of the above config, you should only need to change:
 	- 'Authelia Portal.conf':
-	
-        - 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
+		- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
 	
 	- 'Protected Endpoint.conf':
 		- 'SERVERIP' = Local IP address of your unRAID server the containers run on. i.e. 192.168.1.50
-		- 'CONTAINERPORT' = Port the container being proxied is running on in unRAID. i.e. Monitorr could be using 480
 		- 'CONTAINERNAME' = Name of the container to be proxied. i.e. 'monitorr'
 		- 'CONTAINERIP' = IP address of the container.
 		- 'YOURDOMAIN' = Your own domain name. 
 
 2. Copy the data and head to your NPM dashboard > Hosts > Proxy Hosts
-		 - **WARNING** - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.
+		 - ~~**WARNING** - if you use Cloudflare as the DNS for your domain, you must change the setting of the subdomain in Cloudflare to bypass proxy ONLY for this step.~~ Seems to be fixed now.
 3. Select Add Proxy Host
     - Details:
         - Domain name: auth.example.com (or whatever CNAME you set in your DNS)
@@ -146,7 +144,7 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 		- Turn ON: Cache Assets, Block Common Exploits
 	- SSL:
 		- Request new SSL certificate
-		- Turn ON: Force SSL, HTTP/2 Support, HSTS Enabled (if using, i.e. on in Cloudflare)
+		- Turn ON: Force SSL, HTTP/2 Support, HSTS Enabled (if using, i.e. in Cloudflare)
 		- Email address: used to create Let’s Encrypt cert.
 		- Select I Agree and Save.
 **REMINDER**: after this is successful, return to Cloudflare and turn the proxy against auth.example.com back ON, or your server IP will be public.
@@ -298,8 +296,9 @@ These instructions were provided by ThreeFN on our Unraid forum thread (link at 
 >On Duo, you actually need TWO logins.  The first is your admin account that sets-up your hostname/integration_key/secret_key via Partner Auth API.  Now with with you need to go into the config for the Application->PartnerAuthAPI and add a user that is THE SAME NAME as the user you have in file/ldap and then EMAIL THEM which will give you the ability to enroll the phone app to that user.  Then you can enroll that in authelia when you get to that point.
 
 
+## Access the Authelia Interface
 
-
+At any time, you can go directly to the Authelia page by typing in your URL set for it. i.e. auth.example.com.
 
 
 
