@@ -9,6 +9,21 @@ unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibra
 
 ----
 # Table of Contents
+1. [Authelia on unRAID] (#authelia-on-unraid)
+2. [References] (#references)
+3. [Redis] (#redis)
+4. [MySQL & MariaDB] (#mysqlmariadb)
+5. [Authelia] (#authelia)
+6. [NGINX Proxy Manager] (#nginx-proxy-manager-npm)
+7. [Protecting Endpoints] (#to-protect-an-endpoint-ie-sonarr)
+8. [FAQ] (#faq)
+	1. [Worflow] (#workflow)
+	2. [Infinite Login Screen] (#noinfinite-native-login-screen-on-endpoint)
+	3. [Let's Encrypt] (#letsencrypt)
+	4. [LDAP] (#ldap)
+	5. [DUO 2FA] (#duo-2fa)
+	6. [Authelia Interface] (#access-the-authelia-interface)
+	
 
 ## Authelia on unRAID
 The instructions below are for installing the following on unRAID using Docker:
