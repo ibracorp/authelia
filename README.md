@@ -171,7 +171,9 @@ The templates provided in this repo assume you have created a CNAME subdomain in
 		- Turn ON: Force SSL, HTTP/2 Support, HSTS Enabled (if using, i.e. in Cloudflare)
 		- Email address: used to create Let’s Encrypt cert.
 		- Select I Agree and Save.
-**REMINDER**: after this is successful, return to Cloudflare and turn the proxy against auth.example.com back ON, or your server IP will be public.
+		
+~~**REMINDER**: after this is successful, return to Cloudflare and turn the proxy against auth.example.com back ON, or your server IP will be public.~~
+
 4. Test that you can reach the webui of Authelia selecting the new proxy or typing in its address. i.e. 'auth.example.com'
     - **NB:** For some reason in the current version of NPM as of writing this (v2.2.4) the SSL settings turn off after initial creation. Go back into the SSL 
 		settings of 'auth.example.com' and turn them back on then save again. 
