@@ -5,9 +5,10 @@ We are most famous for our media streaming product IBRAFLIX (https://ibraflix.co
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
 You can find our repos here: https://github.com/ibracorp?tab=repositories
-For help you can join our discord: https://discord.gg/VWAG7rZ
 
 unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/
+
+*Disclaimer: we are in no way offically affiliated with the product below. We simply try to connect their work to a wider audience. We are not responsible or liable for any damages as result of following these instructions and are provided only for reference and assistance.*
 
 ----
 <img src="https://i.imgur.com/h0frxFb.png" width="500" height="250">
