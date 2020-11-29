@@ -8,7 +8,9 @@ For help you can join our discord: https://discord.gg/VWAG7rZ
 unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/
 
 ----
-# Authelia on unRAID
+# Table of Contents
+
+## Authelia on unRAID
 The instructions below are for installing the following on unRAID using Docker:
 - Authelia
     -  Website: https://www.authelia.com/
@@ -173,6 +175,8 @@ The templates provided in this repo assume you have created a CNAME subdomain in
         
 	- Confirm you can connect to the API by using, for example, Ombi. TV > Sonarr > Test connection. 		
 			
+# FAQ
+
 ## Workflow
 In theory the workflow is:
 
@@ -299,14 +303,3 @@ These instructions were provided by ThreeFN on our Unraid forum thread (link at 
 ## Access the Authelia Interface
 
 At any time, you can go directly to the Authelia page by typing in your URL set for it. i.e. auth.example.com.
-
-
-
-
-
-
-
-
-
-
-
