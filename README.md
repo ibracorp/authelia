@@ -24,7 +24,7 @@ We assume your environment has the following already setup and working:
 		- auth.example.com
 		- service.example.com
 
-This will not cover how to configure LDAP, Traefik or Let’s Encrypt, however there are plenty of resources on how to do this, including the official docs of Authelia.
+This will not cover how to configure ~~LDAP~~ (see bottom), Traefik or Let’s Encrypt, however there are plenty of resources on how to do this, including the official docs of Authelia.
 
 ----
 ##	REFERENCES
@@ -209,9 +209,87 @@ If you are using LinuxServer.io LE container you need to add this under the serv
 	
 If you are using the LSIO LE container, there's no need to utilize Authelia as its own subdomain reverse proxy.
 
-## To Do
-- Add instructions on how to forward auth for SSO
-- More specific examples of config for apps such as Nextcloud
+## LDAP
+
+If you want to use LDAP as your backend (which is recommended), here's the config we use in the Authelia YAML. Be sure to comment out the File Backend section when using this. 
+**NOTE**: This config is based on implementation with FreeIPA as our LDAP server. If using any other server such as OpenLDAP or Active Directory, you will need to adjust the user/group attributes and filters to suit. 
+You must also modify the domain settings below to match your environment.
+
+```
+# LDAP backend configuration.
+  #
+  # This backend allows Authelia to be scaled to more
+  # than one instance and therefore is recommended for
+  # production.
+  ldap:
+    # The url to the ldap server. Scheme can be ldap:// or ldaps://
+    url: ldap://192.168.1.150
+    
+    # Skip verifying the server certificate (to allow self-signed certificate).
+    skip_verify: true
+    
+    # The base dn for every entries.
+    base_dn: dc=contoso,dc=com
+    
+    # The attribute holding the username of the user. This attribute is used to populate
+    # the username in the session information. It was introduced due to #561 to handle case
+    # insensitive search queries.
+    # For you information, Microsoft Active Directory usually uses 'sAMAccountName' and OpenLDAP
+    # usually uses 'uid'
+    # Beware that this attribute holds the unique identifiers for the users binding the user and the configuration
+    # stored in database. Therefore only single value attributes are allowed and the value
+    # must never be changed once attributed to a user otherwise it would break the configuration
+    # for that user. Technically, non-unique attributes like 'mail' can also be used but we don't recommend using
+    # them, we instead advise to use the attributes mentioned above (sAMAccountName and uid) to follow
+    # https://www.ietf.org/rfc/rfc2307.txt.
+    username_attribute: uid
+    
+    # An additional dn to define the scope to all users
+    additional_users_dn: cn=users,cn=accounts
+
+    # The users filter used in search queries to find the user profile based on input filled in login form.
+    # Various placeholders are available to represent the user input and back reference other options of the configuration:
+    # - {input} is a placeholder replaced by what the user inputs in the login form. 
+    # - {username_attribute} is a placeholder replaced by what is configured in `username_attribute`.
+    # - {mail_attribute} is a placeholder replaced by what is configured in `mail_attribute`.
+    # - DON'T USE - {0} is an alias for {input} supported for backward compatibility but it will be deprecated in later versions, so please don't use it.
+    #
+    # Recommended settings are as follows:
+    # - Microsoft Active Directory: (&({username_attribute}={input})(objectCategory=person)(objectClass=user))
+    # - OpenLDAP: (&({username_attribute}={input})(objectClass=person))' or '(&({username_attribute}={input})(objectClass=inetOrgPerson))
+    #
+    # To allow sign in both with username and email, one can use a filter like
+    # (&(|({username_attribute}={input})({mail_attribute}={input}))(objectClass=person))
+    users_filter: (uid={0})
+
+    # An additional dn to define the scope of groups
+    additional_groups_dn: cn=groups,cn=accounts
+    
+    # The groups filter used in search queries to find the groups of the user.
+    # - {input} is a placeholder replaced by what the user inputs in the login form.
+    # - {username} is a placeholder replace by the username stored in LDAP (based on `username_attribute`).
+    # - {dn} is a matcher replaced by the user distinguished name, aka, user DN.
+    # - {username_attribute} is a placeholder replaced by what is configured in `username_attribute`.
+    # - {mail_attribute} is a placeholder replaced by what is configured in `mail_attribute`.
+    # - DON'T USE - {0} is an alias for {input} supported for backward compatibility but it will be deprecated in later versions, so please don't use it.
+    # - DON'T USE - {1} is an alias for {username} supported for backward compatibility but it will be deprecated in later version, so please don't use it.
+    groups_filter: (&(member=uid={0},cn=users,cn=accounts,dc=ibracorp,dc=io)(objectclass=groupofnames))
+
+    # The attribute holding the name of the group
+    group_name_attribute: cn
+
+    # The attribute holding the mail address of the user. If multiple email addresses are defined for a user, only the first
+    # one returned by the LDAP server is used.
+    mail_attribute: mail
+
+    # The attribute holding the display name of the user. This will be used to greet an authenticated user.
+    display_name_attribute: givenName
+
+    # The username and password of the admin user.
+    user: uid=authelia,cn=users,cn=accounts,dc=contoso,dc=com
+    # Password can also be set using a secret: https://docs.authelia.com/configuration/secrets.html
+    password: YOURPASSWORD
+```
 
 
 
