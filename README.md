@@ -287,7 +287,7 @@ You must also modify the domain settings below to match your environment.
     #
     # To allow sign in both with username and email, one can use a filter like
     # (&(|({username_attribute}={input})({mail_attribute}={input}))(objectClass=person))
-    users_filter: (uid={0})
+    users_filter: (&({username_attribute}={input})(objectClass=person))
 
     # An additional dn to define the scope of groups
     additional_groups_dn: cn=groups,cn=accounts
