@@ -334,7 +334,7 @@ At any time, you can go directly to the Authelia page by typing in your URL set 
 
 If using the external database and Redis options (recommended), it's important to note that the startup order of your containers must be configured correctly.
 In unRAID:
-	- On the Dockers page, select Advanced
-	- Click and drag the rows of containers so that all database containers are higher on the list than Authelia
-	- Next, beside the Autostart toggle, you can set a delay (in seconds) for the container to wait before starting the next container underneath it.
-		This is useful because it allows certain containers which take a while to start up and may have dependencies to have more time to finish.
+1. On the Dockers page, select Advanced
+2. Click and drag the rows of containers so that all database containers are higher on the list than Authelia
+3. Next, beside the Autostart toggle, you can set a delay (in seconds) for the container to wait before starting the next container underneath it.
+	- This is useful because it allows certain containers which take a while to start up and may have dependencies to have more time to finish.
