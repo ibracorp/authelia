@@ -4,6 +4,8 @@ We run a home lab server which offers various services such as media streaming, 
 We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
+Please subscribe to our YouTube channel for more informative videos and help: https://bit.ly/3q39SJO
+
 You can find our repos here: https://github.com/ibracorp?tab=repositories
 
 unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/
