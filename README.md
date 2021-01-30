@@ -4,11 +4,32 @@ We run a home lab server which offers various services such as media streaming, 
 We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
-Please subscribe to our YouTube channel for more informative videos and help: https://bit.ly/3q39SJO
+= IBRACORP =
+Service Status: http://bit.ly/3aweIcz.
+The server reboots daily at 07:00 AM AEST. 20-30 min outage.
 
-You can find our repos here: https://github.com/ibracorp?tab=repositories
+IBRACORP - http://bit.ly/IBRACORP
+IBRAFORUM - http://bit.ly/3ptuo6q
+YouTube: https://bit.ly/3q39SJO
+GitHub - https://bit.ly/3onzEY3
+unRAID Forum - http://bit.ly/2MwDPTV
+Discord - http://bit.ly/2YgjcOq
 
-unRAID Forums Support Thread: https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/
+== Donate ==
+PayPal: http://bit.ly/3r3Ntg2
+Donation keeps us moving and provides vital funds to accelerate the improvement of our hardware and infrastructure.
+
+100% of donations are injected into the IBRACORE project.
+
+== Affiliate Links ==
+CoinSpot - http://bit.ly/3puwTWb
+Want cryptocurrency? Spread the good stuff and get it back in return. Mass adoption starts with you!
+Please use my affiliate link to set up an account and help us both. Thank you!
+
+== Support ==
+If you require support or have any questions you can contact us at support@ibracorp.io​​​​​​​.
+
+===============================
 
 *Disclaimer: we are in no way offically affiliated with the product below. We simply try to connect their work to a wider audience. We are not responsible or liable for any damages as result of following these instructions and are provided only for reference and assistance.*
 
