@@ -4,7 +4,7 @@ We run a home lab server which offers various services such as media streaming, 
 We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
-= IBRACORP =
+# IBRACORP
 Service Status: http://bit.ly/3aweIcz.
 The server reboots daily at 07:00 AM AEST. 20-30 min outage.
 
@@ -15,18 +15,18 @@ GitHub - https://bit.ly/3onzEY3
 unRAID Forum - http://bit.ly/2MwDPTV
 Discord - http://bit.ly/2YgjcOq
 
-== Donate ==
+## Donate
 PayPal: http://bit.ly/3r3Ntg2
 Donation keeps us moving and provides vital funds to accelerate the improvement of our hardware and infrastructure.
 
 100% of donations are injected into the IBRACORE project.
 
-== Affiliate Links ==
+## Affiliate Links
 CoinSpot - http://bit.ly/3puwTWb
 Want cryptocurrency? Spread the good stuff and get it back in return. Mass adoption starts with you!
 Please use my affiliate link to set up an account and help us both. Thank you!
 
-== Support ==
+## Support
 If you require support or have any questions you can contact us at support@ibracorp.io​​​​​​​.
 
 ===============================
