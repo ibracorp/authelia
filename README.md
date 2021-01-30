@@ -5,29 +5,29 @@ We are most famous for our media streaming product IBRAFLIX (https://ibraflix.co
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
 # IBRACORP
-Service Status: http://bit.ly/3aweIcz.
-The server reboots daily at 07:00 AM AEST. 20-30 min outage.
+Service Status: http://bit.ly/3aweIcz. <br>
+The server reboots daily at 07:00 AM AEST. 20-30 min outage. <br>
 
-IBRACORP - http://bit.ly/IBRACORP
-IBRAFORUM - http://bit.ly/3ptuo6q
-YouTube: https://bit.ly/3q39SJO
-GitHub - https://bit.ly/3onzEY3
-unRAID Forum - http://bit.ly/2MwDPTV
-Discord - http://bit.ly/2YgjcOq
+IBRACORP - http://bit.ly/IBRACORP <br>
+IBRAFORUM - http://bit.ly/3ptuo6q <br>
+YouTube: https://bit.ly/3q39SJO <br>
+GitHub - https://bit.ly/3onzEY3 <br>
+unRAID Forum - http://bit.ly/2MwDPTV <br>
+Discord - http://bit.ly/2YgjcOq <br>
 
 ## Donate
-PayPal: http://bit.ly/3r3Ntg2
-Donation keeps us moving and provides vital funds to accelerate the improvement of our hardware and infrastructure.
+PayPal: http://bit.ly/3r3Ntg2 <br>
+Donation keeps us moving and provides vital funds to accelerate the improvement of our hardware and infrastructure. <br>
 
-100% of donations are injected into the IBRACORE project.
+100% of donations are injected into the IBRACORE project. <br>
 
 ## Affiliate Links
-CoinSpot - http://bit.ly/3puwTWb
-Want cryptocurrency? Spread the good stuff and get it back in return. Mass adoption starts with you!
-Please use my affiliate link to set up an account and help us both. Thank you!
+CoinSpot - http://bit.ly/3puwTWb <br>
+Want cryptocurrency? Spread the good stuff and get it back in return. Mass adoption starts with you! <br>
+Please use my affiliate link to set up an account and help us both. Thank you! <br>
 
 ## Support
-If you require support or have any questions you can contact us at support@ibracorp.io​​​​​​​.
+If you require support or have any questions you can contact us at support@ibracorp.io​​​​​​​. <br>
 
 ===============================
 
