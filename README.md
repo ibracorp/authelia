@@ -324,7 +324,7 @@ You must also modify the domain settings below to match your environment.
     # - {mail_attribute} is a placeholder replaced by what is configured in `mail_attribute`.
     # - DON'T USE - {0} is an alias for {input} supported for backward compatibility but it will be deprecated in later versions, so please don't use it.
     # - DON'T USE - {1} is an alias for {username} supported for backward compatibility but it will be deprecated in later version, so please don't use it.
-    groups_filter: (&(member=uid={0},cn=users,cn=accounts,dc=ibracorp,dc=io)(objectclass=groupofnames))
+    groups_filter: (&(member=uid={0},cn=users,cn=accounts,dc=contoso,dc=com)(objectclass=groupofnames))
 
     # The attribute holding the name of the group
     group_name_attribute: cn
