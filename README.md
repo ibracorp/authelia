@@ -4,10 +4,26 @@ We run a home lab server which offers various services such as media streaming, 
 We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
-# IBRACORP
-Service Status: http://bit.ly/3aweIcz. <br>
-The server reboots daily at 07:00 AM AEST. 20-30 min outage. <br>
+## Support Us
+Membership: http://bit.ly/3bRgdlU​
 
+Help support my work by subscribing to our site. It's free with paid options. There are no fees involved and it really helps me give back to you.<br>
+
+Become a free subscriber of our site to:<br>
+- Receive the latest YouTube videos first, before going public on YouTube.<br>
+- Read our articles which go with our videos and other work we do.<br>
+- Emails directly to your inbox with the latest content. No spam, no bs.<br>
+- More<br>
+
+Become a paid subscriber of our site to:
+- Get exclusive videos only for supporters.
+- Ask for direct support with helping install or provide consultancy to you.
+- Receive advanced tutorials and articles for your IT needs.
+- Help support indie creators (and a father of two) to bring you the best content possible!
+
+We really appreciate your support. 
+
+## IBRACORP
 IBRACORP - http://bit.ly/IBRACORP <br>
 IBRAFORUM - http://bit.ly/3ptuo6q <br>
 YouTube: https://bit.ly/3q39SJO <br>
