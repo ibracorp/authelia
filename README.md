@@ -4,8 +4,8 @@ We run a home lab server which offers various services such as media streaming, 
 We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
-## Support Us
-Membership: http://bit.ly/3bRgdlU​
+## == Support Us ==
+Membership: http://bit.ly/3bRgdlU <br>
 
 Help support my work by subscribing to our site. It's free with paid options. There are no fees involved and it really helps me give back to you.<br>
 
@@ -15,35 +15,23 @@ Become a free subscriber of our site to:<br>
 - Emails directly to your inbox with the latest content. No spam, no bs.<br>
 - More<br>
 
-Become a paid subscriber of our site to:
-- Get exclusive videos only for supporters.
-- Ask for direct support with helping install or provide consultancy to you.
-- Receive advanced tutorials and articles for your IT needs.
-- Help support indie creators (and a father of two) to bring you the best content possible!
+Become a paid subscriber of our site to:<br>
+- Get exclusive videos only for supporters.<br>
+- Ask for direct support with helping install or provide consultancy to you.<br>
+- Receive advanced tutorials and articles for your IT needs.<br>
+- Help support indie creators (and a father of two) to bring you the best content possible!<br>
 
-We really appreciate your support. 
+We really appreciate your support. <br>
 
-## IBRACORP
-IBRACORP - http://bit.ly/IBRACORP <br>
-IBRAFORUM - http://bit.ly/3ptuo6q <br>
-YouTube: https://bit.ly/3q39SJO <br>
-GitHub - https://bit.ly/3onzEY3 <br>
-unRAID Forum - http://bit.ly/2MwDPTV <br>
-Discord - http://bit.ly/2YgjcOq <br>
+## == IBRACORP ==
+IBRACORP - http://bit.ly/IBRACORP
+YouTube: https://bit.ly/3q39SJO
+GitHub - https://bit.ly/3onzEY3
+unRAID Forum - http://bit.ly/2MwDPTV
+Discord - http://bit.ly/2YgjcOq
 
-## Donate
-PayPal: http://bit.ly/3r3Ntg2 <br>
-Donation keeps us moving and provides vital funds to accelerate the improvement of our hardware and infrastructure. <br>
-
-100% of donations are injected into the IBRACORE project. <br>
-
-## Affiliate Links
-CoinSpot - http://bit.ly/3puwTWb <br>
-Want cryptocurrency? Spread the good stuff and get it back in return. Mass adoption starts with you! <br>
-Please use my affiliate link to set up an account and help us both. Thank you! <br>
-
-## Support
-If you require support or have any questions you can contact us at support@ibracorp.io​​​​​​​. <br>
+## == Support ==
+If you require support or have any questions you can contact us at support@ibracorp.io. <br>
 
 ===============================
 
