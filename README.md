@@ -24,11 +24,11 @@ Become a paid subscriber of our site to:<br>
 We really appreciate your support. <br>
 
 ## == IBRACORP ==
-IBRACORP - http://bit.ly/IBRACORP
-YouTube: https://bit.ly/3q39SJO
-GitHub - https://bit.ly/3onzEY3
-unRAID Forum - http://bit.ly/2MwDPTV
-Discord - http://bit.ly/2YgjcOq
+IBRACORP - http://bit.ly/IBRACORP <br>
+YouTube: https://bit.ly/3q39SJO <br>
+GitHub - https://bit.ly/3onzEY3 <br>
+unRAID Forum - http://bit.ly/2MwDPTV <br>
+Discord - http://bit.ly/2YgjcOq <br>
 
 ## == Support ==
 If you require support or have any questions you can contact us at support@ibracorp.io. <br>
