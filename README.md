@@ -56,6 +56,7 @@ If you require support or have any questions you can contact us at support@ibra
 	5. [DUO 2FA](#duo-2fa)
 	6. [Authelia Interface](#access-the-authelia-interface)
 	7. [Startup Order](#startup-order)
+	8. [File Permissions](#insufficient-permissions-to-edit-config-file)
 	
 
 ## Authelia on unRAID
@@ -365,3 +366,31 @@ In unRAID:
 2. Click and drag the rows of containers so that all database containers are higher on the list than Authelia
 3. Next, beside the Autostart toggle, you can set a delay (in seconds) for the container to wait before starting the next container underneath it.
 	- This is useful because it allows certain containers which take a while to start up and may have dependencies to have more time to finish.
+
+## Insufficient Permissions to Edit Config File
+
+If you are confronted with permissions issues when trying to edit the YML file, check your permissions by opening the console in unRAID and entering the following (after the #):
+```
+root@yourserver:~# ls -lah /mnt/user/appdata/Authelia/
+```
+You may see the following:
+```
+drwxrwxrwx 1 nobody users  34 Mar  5 17:20 ./
+drwxrwxrwx 1 nobody users 410 Mar  5 17:19 ../
+-rw------- 1 nobody users 20K Mar  5 17:20 configuration.yml
+```
+Notice the last line, where it is not allowing editing. 
+To fix this enter the following in the console:
+```
+root@yourserver:~# chmod a+rw /mnt/user/appdata/Authelia/configuration.yml 
+```
+Then check the permissions again:
+```
+root@yourserver:~# ls -lah /mnt/user/appdata/Authelia/
+```
+You should now see this:
+```
+drwxrwxrwx 1 nobody users  34 Mar  5 17:20 ./
+drwxrwxrwx 1 nobody users 410 Mar  5 17:19 ../
+-rw-rw-rw- 1 nobody users 20K Mar  5 17:20 configuration.yml
+```
