@@ -24,7 +24,7 @@ Become a paid subscriber of our site to:<br>
 We really appreciate your support. <br>
 
 ## == IBRACORP ==
-IBRACORP - http://bit.ly/IBRACORP <br>
+IBRACORP - https://ibracorp.io <br>
 YouTube: https://bit.ly/3q39SJO <br> 
 GitHub - https://bit.ly/3onzEY3 <br>
 unRAID Forum - http://bit.ly/2MwDPTV <br>
