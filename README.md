@@ -60,6 +60,9 @@ If you require support or have any questions you can contact us at support@ibra
 	
 
 ## Authelia on unRAID
+### WATCH OUR NEW VIDEO WALKTHROUGH INSTEAD - SUBSCRIBE FOR MORE!
+ [![Authelia (In Depth)](https://i.imgur.com/dSYcVmW.jpg)](https://youtu.be/kw_pohbKE3Y "Authelia (In Depth)")
+
 The instructions below are for installing the following on unRAID using Docker:
 - Authelia
     -  Website: https://www.authelia.com/
