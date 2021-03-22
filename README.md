@@ -5,7 +5,7 @@ We are most famous for our media streaming product IBRAFLIX (https://ibraflix.co
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
 ## == Support Us ==
-Membership: http://bit.ly/3bRgdlU <br>
+Membership: https://ibracorp.io/membership/ <br>
 
 Help support my work by subscribing to our site. It's free with paid options. There are no fees involved and it really helps me give back to you.<br>
 
@@ -25,10 +25,11 @@ We really appreciate your support. <br>
 
 ## == IBRACORP ==
 IBRACORP - https://ibracorp.io <br>
-YouTube: https://bit.ly/3q39SJO <br> 
-GitHub - https://bit.ly/3onzEY3 <br>
+YouTube: https://youtube.com/c/IBRACORP <br> 
+GitHub - https://github.com/ibracorp <br>
 unRAID Forum - http://bit.ly/2MwDPTV <br>
-Discord - http://bit.ly/2YgjcOq <br>
+Discord - https://discord.gg/VWAG7rZ <br>
+Twitter - https://twitter.com/IBRACORP_IO <br>
 
 ## == Support ==
 If you require support or have any questions you can contact us at support@ibracorp.io. <br>
