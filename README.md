@@ -21,7 +21,11 @@ Become a paid subscriber of our site to:<br>
 - Receive advanced tutorials and articles for your IT needs.<br>
 - Help support indie creators (and a father of two) to bring you the best content possible!<br>
 
-We really appreciate your support. <br>
+### == PAYPAL ==
+Prefer to donate via PayPal?
+You can donate to us right here: https://paypal.me/ramteksolutions
+
+We really appreciate your support in any shape or form.  <br>
 
 ## == IBRACORP ==
 IBRACORP - https://ibracorp.io <br>
