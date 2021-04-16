@@ -94,8 +94,20 @@ authentication_backend:
     # The url to the ldap server. Scheme can be ldap:// or ldaps://
     #url: ldap://127.0.0.1
     
-    # Skip verifying the server certificate (to allow self-signed certificate).
+    ## Use StartTLS with the LDAP connection.
+    #start_tls: true   
+
+    #tls:
+    ## Server Name for certificate validation (in case it's not set correctly in the URL).
+    # server_name: ldap.example.com
+
+    ## Skip verifying the server certificate (to allow a self-signed certificate).
+    ## In preference to setting this we strongly recommend you add the public portion of the certificate to the
+    ## certificates directory which is defined by the `certificates_directory` option at the top of the config.
     #skip_verify: true
+
+    ## Minimum TLS version for either Secure LDAP or LDAP StartTLS.
+    #minimum_version: TLS1.2
     
     # The base dn for every entries
     #base_dn: dc=example,dc=com
@@ -114,7 +126,7 @@ authentication_backend:
     #username_attribute: uid
     
     # An additional dn to define the scope to all users
-    #additional_users_dn: ou=users
+    #additional_users_dn: cn=users,cn=accounts
 
     # The users filter used in search queries to find the user profile based on input filled in login form.
     # Various placeholders are available to represent the user input and back reference other options of the configuration:
@@ -132,7 +144,7 @@ authentication_backend:
     #users_filter: (&({username_attribute}={input})(objectClass=person))
 
     # An additional dn to define the scope of groups
-    #additional_groups_dn: ou=groups
+    #additional_groups_dn: cn=groups,cn=accounts
     
     # The groups filter used in search queries to find the groups of the user.
     # - {input} is a placeholder replaced by what the user inputs in the login form.
@@ -142,7 +154,7 @@ authentication_backend:
     # - {mail_attribute} is a placeholder replaced by what is configured in `mail_attribute`.
     # - DON'T USE - {0} is an alias for {input} supported for backward compatibility but it will be deprecated in later versions, so please don't use it.
     # - DON'T USE - {1} is an alias for {username} supported for backward compatibility but it will be deprecated in later version, so please don't use it.
-    #groups_filter: (&(member={dn})(objectclass=groupOfNames))
+    #groups_filter: (&(member=uid={input},cn=users,cn=accounts,dc=galaxyone,dc=me)(objectclass=groupofnames))
 
     # The attribute holding the name of the group
     #group_name_attribute: cn
@@ -150,9 +162,12 @@ authentication_backend:
     # The attribute holding the mail address of the user. If multiple email addresses are defined for a user, only the first
     # one returned by the LDAP server is used.
     #mail_attribute: mail
+    
+    # The attribute holding the display name of the user. This will be used to greet an authenticated user.
+    #display_name_attribute: givenName
 
-    # The username and password of the admin user.
-    #user: cn=admin,dc=example,dc=com
+    # The username and password of an LDAP admin user.
+    #user: uid=admin,cn=users,cn=accounts,dc=example,dc=com
     # Password can also be set using a secret: https://docs.authelia.com/configuration/secrets.html
     #password: YOURPASSWORD
 
