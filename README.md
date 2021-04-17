@@ -5,21 +5,22 @@ We are most famous for our media streaming product IBRAFLIX (https://ibraflix.co
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
 ## == Support Us ==
-Membership: https://ibracorp.io/membership/ <br>
+Join our website: https://ibracorp.io/membership/ <br>
+###OR <br>
+Join our channel: https://www.youtube.com/channel/UC7aW7chIafJG6ECYAd3N5uQ/join <br>
+To get access to perks and bonuses.<br>
 
-Help support my work by subscribing to our site. It's free with paid options. There are no fees involved and it really helps me give back to you.<br>
+Help support our work by joining our site or YouTube channel. It really helps us give back to you.
 
-Become a free subscriber of our site to:<br>
-- Receive the latest YouTube videos first, before going public on YouTube.<br>
-- Read our articles which go with our videos and other work we do.<br>
-- Emails directly to your inbox with the latest content. No spam, no bs.<br>
-- More<br>
+Become a free subscriber of our site to:
+- Read our articles which go with our videos and other work we do.
+- Emails directly to your inbox with the latest content. No spam, no bs.
+- More
 
-Become a paid subscriber of our site to:<br>
-- Get exclusive videos only for supporters.<br>
-- Ask for direct support with helping install or provide consultancy to you.<br>
-- Receive advanced tutorials and articles for your IT needs.<br>
-- Help support indie creators (and a father of two) to bring you the best content possible!<br>
+Become a paid subscriber of our site to:
+- Get exclusive videos only for supporters.
+- Receive advanced tutorials and articles for your IT needs.
+- Help support indie creators (and a father of two) to bring you the best content possible!
 
 ### == PAYPAL ==
 Prefer to donate via PayPal?
