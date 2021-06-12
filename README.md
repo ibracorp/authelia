@@ -1,7 +1,8 @@
-<img src="https://i.imgur.com/hHH2J7w.png" width="800" height="200">
+<p align="center">
+  <img src="https://i.imgur.com/y3FIX3d.png">
+</p>
 
 We run a home lab server which offers various services such as media streaming, cloud storage, chat, and more.
-We are most famous for our media streaming product IBRAFLIX (https://ibraflix.com)
 Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
 
 ## == Support Us ==
