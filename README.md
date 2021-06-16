@@ -1,44 +1,14 @@
-<p align="center">
+<<p align="center">
   <img src="https://i.imgur.com/y3FIX3d.png">
 </p>
 
-We run a home lab server which offers various services such as media streaming, cloud storage, chat, and more.
-Our goal is to help bring open source products in the community to more users by making them friendly to use and helping support an open source future which protects privacy and is collaborative.
-
-## == Support Us ==
-Join our website: https://ibracorp.io/membership/ <br>
-### OR <br>
-Join our channel: https://www.youtube.com/channel/UC7aW7chIafJG6ECYAd3N5uQ/join <br>
-To get access to perks and bonuses.<br>
-
-Help support our work by joining our site or YouTube channel. It really helps us give back to you.
-
-Become a free subscriber of our site to:
-- Read our articles which go with our videos and other work we do.
-- Emails directly to your inbox with the latest content. No spam, no bs.
-- More
-
-Become a paid subscriber of our site to:
-- Get exclusive videos only for supporters.
-- Receive advanced tutorials and articles for your IT needs.
-- Help support indie creators (and a father of two) to bring you the best content possible!
-
-### == PAYPAL ==
-Prefer to donate via PayPal?
-You can donate to us right here: https://paypal.me/ramteksolutions
-
-We really appreciate your support in any shape or form.  <br>
-
-## == IBRACORP ==
+### Our Links
 IBRACORP - https://ibracorp.io <br>
 YouTube: https://youtube.com/c/IBRACORP <br> 
+Discord - https://discord.gg/VWAG7rZ <br>
 GitHub - https://github.com/ibracorp <br>
 unRAID Forum - http://bit.ly/2MwDPTV <br>
-Discord - https://discord.gg/VWAG7rZ <br>
 Twitter - https://twitter.com/IBRACORP_IO <br>
-
-## == Support ==
-If you require support or have any questions you can contact us at support@ibracorp.io. <br>
 
 ===============================
 
