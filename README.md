@@ -1,6 +1,17 @@
-<<p align="center">
+<p align="center">
   <img src="https://i.imgur.com/y3FIX3d.png">
 </p>
+
+<br>
+
+**OUR DOCUMENTATION HAS MOVED!** <br>
+
+**FOR THE MOST UP TO DATE DOCUMENTATION PLEASE SEE OUR DOCS SITE AT: [https://docs.ibracorp.io](https://docs.ibracorp.io/all-guides-in-order/documentation/authelia)**
+
+The files listed in this repo will be contiually maintained to match the documention.
+
+
+<img src="https://i.imgur.com/h0frxFb.png" width="500" height="250">
 
 ### Our Links
 IBRACORP - https://ibracorp.io <br>
@@ -13,10 +24,4 @@ Twitter - https://twitter.com/IBRACORP_IO <br>
 
 ===============================
 
-*Disclaimer: we are in no way offically affiliated with the product below. We simply try to connect their work to a wider audience. We are not responsible or liable for any damages as result of following these instructions and are provided only for reference and assistance.*
 
-----
-<img src="https://i.imgur.com/h0frxFb.png" width="500" height="250">
-
-**OUR DOCUMENTATION HAS MOVED! <br>
-FOR THE MOST UP TO DATE DOCUMENTATION PLEASE SEE OUR DOCS SITE AT: [https://docs.ibracorp.io](https://docs.ibracorp.io/all-guides-in-order/documentation/authelia)**
