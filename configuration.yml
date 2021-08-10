@@ -119,6 +119,7 @@ access_control:
       policy: one_factor
       subject: 
         - "group:moderators"
+        - "group:admins"
     ## one factor login - requesters
     - domain:
         - "petio.domain.com"
@@ -126,6 +127,7 @@ access_control:
       policy: one_factor
       subject: 
         - "group:requesters"
+        - "group:admins"
     ## one factor login - catch all 
     - domain: "*.domain.com"
       policy: one_factor
