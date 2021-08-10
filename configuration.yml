@@ -58,15 +58,15 @@ authentication_backend:
     password: LDAPAdminUserPassword
 
   ####################################
-  # file:
-  #   path: /config/users_database.yml
-  #   password:
-  #     algorithm: argon2id
-  #     iterations: 1
-  #     key_length: 32
-  #     salt_length: 16
-  #     memory: 1024
-  #     parallelism: 8
+  #file:
+  #  path: /config/users_database.yml
+  #  password:
+  #    algorithm: argon2id
+  #    iterations: 1
+  #    key_length: 32
+  #    salt_length: 16
+  #    memory: 1024
+  #    parallelism: 8
   ####################################
 
 ########## EXAMPLE RULES #############
@@ -104,6 +104,7 @@ access_control:
     - domain: 
         - "proxy.domain.com"
         - "ipa.domain.com"
+        - "opn.domain.com"
       policy: two_factor
       subject: 
         - "group:admins"
@@ -112,15 +113,12 @@ access_control:
         - "sonarr.domain.com"
         - "radarr.domain.com"
         - "nzbhydra.domain.com"
-        - "prowlarr.domain.com"
         - "sabnzbd.domain.com"
-        - "nzbget.domain.com"
         - "torrent.domain.com"
         - "domain.com"
       policy: one_factor
       subject: 
         - "group:moderators"
-        - "group:admins"
     ## one factor login - requesters
     - domain:
         - "petio.domain.com"
@@ -128,7 +126,6 @@ access_control:
       policy: one_factor
       subject: 
         - "group:requesters"
-        - "group:admins"
     ## one factor login - catch all 
     - domain: "*.domain.com"
       policy: one_factor
