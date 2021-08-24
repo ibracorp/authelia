@@ -82,15 +82,15 @@ access_control:
     - domain: "*.domain.com"
       policy: bypass
       resources:
-        - "^/api/.*$"
-        - "^/identity/.*$"
-        - "^/triggers/.*$"
+        - "^/api([/?].*)?$"
+        - "^/identity.*$"
+        - "^/triggers.*$"
         - "^/meshagents.*$"
         - "^/meshsettings.*$"
         - "^/agent.*$"
         - "^/control.*$"
         - "^/meshrelay.*$"
-        - "^/wl/.*$"
+        - "^/wl.*$"
     ## block admin
     - domain: "bitwarden.domain.com"
       policy: one_factor
