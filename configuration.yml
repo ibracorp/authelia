@@ -95,7 +95,7 @@ access_control:
     - domain: "bitwarden.domain.com"
       policy: one_factor
       resources:
-        - "^/admin.*$"
+        - "^*/admin.*$"
     ## bypass rule
     - domain:
         - "bitwarden.domain.com"
