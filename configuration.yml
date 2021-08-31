@@ -80,7 +80,6 @@ access_control:
       policy: bypass
     ## bypass api / trigges
     - domain: "*.domain.com"
-      policy: bypass
       resources:
         - "^/api([/?].*)?$"
         - "^/identity.*$"
@@ -91,11 +90,12 @@ access_control:
         - "^/control.*$"
         - "^/meshrelay.*$"
         - "^/wl.*$"
+      policy: bypass
     ## block admin
     - domain: "bitwarden.domain.com"
-      policy: one_factor
       resources:
         - "^*/admin.*$"
+      policy: one_factor
     ## bypass rule
     - domain:
         - "bitwarden.domain.com"
@@ -105,9 +105,9 @@ access_control:
         - "proxy.domain.com"
         - "ipa.domain.com"
         - "opn.domain.com"
-      policy: two_factor
       subject: 
         - "group:admins"
+      policy: two_factor
     ## one factor login - moderators
     - domain:
         - "sonarr.domain.com"
@@ -116,23 +116,23 @@ access_control:
         - "sabnzbd.domain.com"
         - "torrent.domain.com"
         - "domain.com"
-      policy: one_factor
       subject: 
         - "group:moderators"
         - "group:admins"
+      policy: one_factor
     ## one factor login - requesters
     - domain:
         - "petio.domain.com"
         - "overseerr.domain.com"
-      policy: one_factor
       subject: 
         - "group:requesters"
         - "group:admins"
+      policy: one_factor
     ## one factor login - catch all 
     - domain: "*.domain.com"
-      policy: one_factor
       subject: 
         - "group:admins"
+      policy: one_factor
 
 session:
   name: authelia_session
