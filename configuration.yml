@@ -156,6 +156,7 @@ regulation:
   ban_time: 12h
 
 storage:
+  encryption_key: you_must_generate_a_random_string_of_more_than_twenty_chars_and_configure_this
   mysql:
     host: 192.168.0.2
     port: 3306
