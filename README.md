@@ -8,7 +8,7 @@
 
 **FOR THE MOST UP TO DATE DOCUMENTATION PLEASE SEE OUR DOCS SITE AT: [https://docs.ibracorp.io](https://docs.ibracorp.io/)**
 
-The files listed in this repo will be contiually maintained to match the documention.
+All associated filed are with the documention at the link above
 
 
 <img src="https://i.imgur.com/h0frxFb.png" width="500" height="250">
